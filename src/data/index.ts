@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { IFormInput, IProduct } from "../interfaces";
+import { ICategory, IFormInput, IProduct } from "../interfaces";
 
 export const productList: IProduct[] = [
   {
@@ -79,7 +79,7 @@ export const productList: IProduct[] = [
   },
 ];
 
-export const formInputsList:IFormInput[] = [
+export const formInputsList: IFormInput[] = [
   {
     id: "title",
     name: "title",
@@ -103,5 +103,27 @@ export const formInputsList:IFormInput[] = [
     name: "price",
     label: "product price",
     type: "number",
+  },
+];
+
+export const colors: string[] = ["#ccc", "#333", "#000", "#ff3333"];
+export const categories: ICategory[]= [
+  {
+    id: uuid(),
+    name: "nike",
+    imageURL:
+      "https://plus.unsplash.com/premium_photo-1706727281590-d7d67ce1c447?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: uuid(),
+    name: "t-shirt",
+    imageURL:
+      "https://plus.unsplash.com/premium_photo-1706727289218-3a84009b3a72?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: uuid(),
+    name: "clothes",
+    imageURL:
+      "https://images.unsplash.com/photo-1620503234111-7009b95ac5d1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
