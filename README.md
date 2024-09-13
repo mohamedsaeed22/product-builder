@@ -1,6 +1,7 @@
 # Product Builder
 
-This is a React/TS-based application for products builder . The application offers various functionalities to create, edit, delete the products
+This is a React/TS-based application for products builder . The application offers various functionalities to create, edit, delete the products, live here
+[product builder](https://react-product-builder.netlify.app/)
 
 ## Table of Contents
 
