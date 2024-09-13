@@ -10,7 +10,7 @@ interface IProps {
   openModalEdit: () => void;
   setProductToEditIndex: (val: number) => void;
   indx: number;
-  removeHandler: (id:string) => void;
+  removeHandler: (id: string) => void;
 }
 
 const ProductCart = ({
@@ -60,7 +60,7 @@ const ProductCart = ({
           className="bg-red-700"
           width="w-full"
           onClick={() => {
-            removeHandler(product.id);
+            removeHandler(product.id!);
           }}
         >
           Delete
