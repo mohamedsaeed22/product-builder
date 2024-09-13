@@ -216,7 +216,7 @@ function App() {
       </div>
 
       {/* add product model */}
-      <Modal isOpen={isOpen} closeModal={closeModal} title="add new product">
+      <Modal isOpen={isOpen} closeModal={closeModal} title="Add new product">
         <form className="space-y-3" onSubmit={submitHandler}>
           {renderFormInputList}
 
@@ -253,21 +253,21 @@ function App() {
       <Modal
         isOpen={isOpenEdit}
         closeModal={closeModalEdit}
-        title="edit current product"
+        title="Edit current product"
       >
         <form className="space-y-3" onSubmit={submitEditHandler}>
           {renderProductEditWithErrorMsg("title", "ProductTitle", "title")}
           {renderProductEditWithErrorMsg(
             "description",
-            "ProductTitle",
+            "ProductDescriptions",
             "description"
           )}
           {renderProductEditWithErrorMsg(
             "imageURL",
-            "ProductTitle",
+            "ProductImageURL",
             "imageURL"
           )}
-          {renderProductEditWithErrorMsg("price", "ProductTitle", "price")}
+          {renderProductEditWithErrorMsg("price", "ProductPrice", "price")}
           <Select
             selected={productToEdit.category}
             setSelected={(val) =>
