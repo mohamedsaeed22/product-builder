@@ -52,8 +52,8 @@ function App() {
     setProduct(defaultProduct);
     closeModal();
   };
-  const removeHandler = (id) => {
-    setProducts(products.filter((p) => p.id !==  id));
+  const removeHandler = (id: string) => {
+    setProducts(products.filter((p) => p.id !== id));
   };
   const onChangehandler = (e: ChangeEvent<HTMLInputElement>) => {
     setProduct((prev) => {
@@ -90,7 +90,12 @@ function App() {
       return;
     }
     setProducts((prev) => [
-      { ...product, id: uuid, colors: tempcolors, category: selectedCategory },
+      {
+        ...product,
+        id: uuid(),
+        colors: tempcolors,
+        category: selectedCategory,
+      },
       ...prev,
     ]);
     setProduct(defaultProduct);
@@ -114,7 +119,12 @@ function App() {
       return;
     }
     setProducts((prev) => [
-      { ...product, id: uuid, colors: tempcolors, category: selectedCategory },
+      {
+        ...product,
+        id: uuid(),
+        colors: tempcolors,
+        category: selectedCategory,
+      },
       ...prev,
     ]);
 
@@ -216,7 +226,7 @@ function App() {
       </div>
 
       {/* add product model */}
-      <Modal isOpen={isOpen} closeModal={closeModal} title="Add new product">
+      <Modal isOpen={isOpen} closeModal={closeModal} title="add new product">
         <form className="space-y-3" onSubmit={submitHandler}>
           {renderFormInputList}
 
